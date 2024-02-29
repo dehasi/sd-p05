@@ -1,0 +1,8 @@
+= Practice #5
+
+*Main takeaway:* read the book below
+
+image::book.png[]
+
+
+.plan
