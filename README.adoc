@@ -1,6 +1,6 @@
 = Practice #5
 
-*Main takeaway:* read the book below
+*Main takeaway:* read the book below and use common sense
 
 image::book.png[]
 
