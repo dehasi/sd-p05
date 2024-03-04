@@ -16,6 +16,8 @@ class RoadRadio implements RadioStation {
     }
 
     @Override public void notifyListeners(String message) {
-        listeners.forEach(listener -> listener.receive(message));
+        for (Listener listener : listeners) {
+            listener.receive(message);
+        }
     }
 }

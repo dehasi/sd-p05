@@ -15,7 +15,6 @@ class OnTheRoad {
         }
     }
 
-
     public static void main(String[] args) {
         RadioStation station = new RoadRadio();
 
