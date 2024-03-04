@@ -10,6 +10,7 @@ class Problem {
 
     void usage1() {
         String middleName = findClientMiddleName1(42);
+
         if(middleName != null) {
             //do smth;
         }
