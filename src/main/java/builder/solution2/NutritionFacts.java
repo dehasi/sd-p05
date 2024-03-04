@@ -44,22 +44,22 @@ class NutritionFacts {
         }
 
         public Builder calories(int calories) {
-            calories = calories;
+            this.calories = calories;
             return this;
         }
 
         public Builder fat(int fat) {
-            fat = fat;
+            this.fat = fat;
             return this;
         }
 
         public Builder sodium(int sodium) {
-            sodium = sodium;
+            this.sodium = sodium;
             return this;
         }
 
         public Builder carbohydrate(int carbohydrate) {
-            carbohydrate = carbohydrate;
+            this.carbohydrate = carbohydrate;
             return this;
         }
 
