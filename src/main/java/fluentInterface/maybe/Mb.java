@@ -1,6 +1,6 @@
 package fluentInterface.maybe;
 
-class OneElementList {
+class Mb {
 
     final class Maybe<E> {
         private final E value;
@@ -23,7 +23,7 @@ class OneElementList {
         }
     }
 
-    Maybe<String> findClientMiddleName(int id) {
+    public Maybe<String> findClientMiddleName(int id) {
         // returns a value
         // or
         return new Maybe<>();
@@ -32,6 +32,7 @@ class OneElementList {
 
     void usage2() {
         Maybe<String> middleName = findClientMiddleName(42);
+
         if (!middleName.isEmpty()) {
             //do smth;
         }

@@ -13,6 +13,7 @@ class Problem {
 
         if (middleName != null) {
             //do smth;
+            middleName.equals("bla");
         }
     }
 
@@ -27,9 +28,7 @@ class Problem {
     void usage2() {
         String middleName = findClientMiddleName2(42);
 
-        if (!middleName.isEmpty()) {
-            //do smth;
-        }
+        middleName.equals("bla");
     }
 
     public static void main(String[] args) {
