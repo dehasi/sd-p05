@@ -3,6 +3,8 @@ package fluentInterface.maybe;
 class Problem {
 
     String findClientMiddleName1(int id) {
+        // returns a value
+        // or
         return null;
     }
 
@@ -14,7 +16,9 @@ class Problem {
     }
 
     String findClientMiddleName2(int id) {
-        return ""; // WFT?
+        // returns a value
+        // or
+        return "";
     }
 
 
