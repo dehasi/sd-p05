@@ -2,7 +2,7 @@ package fluentInterface.maybe;
 
 class OneElementList {
 
-    class Maybe<E> {
+    final class Maybe<E> {
         private final E value;
 
         Maybe() {
@@ -32,7 +32,7 @@ class OneElementList {
 
     void usage2() {
         Maybe<String> middleName = findClientMiddleName(42);
-        if(!middleName.isEmpty()) {
+        if (!middleName.isEmpty()) {
             //do smth;
         }
     }
