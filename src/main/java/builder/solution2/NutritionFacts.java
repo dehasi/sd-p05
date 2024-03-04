@@ -76,6 +76,6 @@ class NutritionFacts {
                 .calories(100)
                 .sodium(35)
                 .carbohydrate(27)
-                .build()
+                .build();
     }
 }
