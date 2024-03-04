@@ -8,7 +8,7 @@ image::book.png[]
 .plan
 * [ ] Creational
 * * [ ] Builder, Optional, Promise
-* * [ ] Fluen interface
+* * [ ] Fluent interface
 * * [ ] Optional, Promise
 * [ ] Structural
 * * [ ] Proxy, Decorator https://stackoverflow.com/q/18618779/4337151[the difference]
