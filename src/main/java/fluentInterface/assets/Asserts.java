@@ -14,8 +14,10 @@ class Asserts {
 
         Check.that(List.of(1, 2, 3))
                 .hasSize(42)
-                .onConditionFail(() -> {
-                    throw new RuntimeException("HEre");
+                .onConditionFail(new Runnable() {
+                    @Override public void run() {
+                        throw new RuntimeException("HEre");
+                    }
                 });
     }
 }
