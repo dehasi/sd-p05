@@ -1,5 +1,7 @@
 package fluentInterface.maybe;
 
+import java.util.function.Function;
+
 class Mb {
 
     final class Maybe<E> {
@@ -31,7 +33,7 @@ class Mb {
     }
 
 
-    void usage2() {
+    void usage() {
         Maybe<String> middleName = findClientMiddleName(42);
 
         if (!middleName.isEmpty()) {
