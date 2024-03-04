@@ -38,13 +38,13 @@ class Var {
     public static Var bind(Var var, Function<Integer, Integer> transformation) {
         // var bound = new Var(transformation.apply(var.value), transformation);
         var bound = new Var(var.value, transformation);
-        var.notify(bound);
+        var.subscribe(bound);
         return bound;
     }
 
     private final List<Var> bounds = new ArrayList<>();
 
-    private void notify(Var bound) {
+    private void subscribe(Var bound) {
         bounds.add(bound);
     }
 }
