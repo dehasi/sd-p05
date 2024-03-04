@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.function.Function;
 
 class Var {
+
+    private final List<Var> bounds = new ArrayList<>();
     private final Function<Integer, Integer> transformation;
     private int value;
 
@@ -41,8 +43,6 @@ class Var {
         var.subscribe(bound);
         return bound;
     }
-
-    private final List<Var> bounds = new ArrayList<>();
 
     private void subscribe(Var bound) {
         bounds.add(bound);
