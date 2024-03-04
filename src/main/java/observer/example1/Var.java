@@ -26,7 +26,7 @@ class Var {
     static Var bind(Var var, Function<Integer, Integer> transformation) {
         // var bound = new Var(transformation.apply(var.value), transformation);
         var bound = new Var(var.value, transformation);
-        var.subscribe(bound);
+        var.register(bound);
         return bound;
     }
 
@@ -44,8 +44,7 @@ class Var {
         this.value = transformation.apply(var.value());
     }
 
-
-    private void subscribe(Var bound) {
+    private void register(Var bound) {
         bounds.add(bound);
     }
 }
