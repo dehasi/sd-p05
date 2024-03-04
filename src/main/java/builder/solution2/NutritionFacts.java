@@ -2,44 +2,80 @@ package builder.solution2;
 
 class NutritionFacts {
 
-    // Parameters initialized to default values (if any)
-    private int servingSize = -1; // Required; no default value
-    private int servings = -1; // Required; no default value
-    private int calories = 0;
-    private int fat = 0;
-    private int sodium = 0;
-    private int carbohydrate = 0;
+    final int servingSize;
+    final int servings;
+    final int calories;
+    final int fat;
+    final int sodium;
+    final int carbohydrate;
 
-    void setServingSize(int val) {
-        servingSize = val;
+    private NutritionFacts(Builder builder) {
+        this.servingSize = builder.servingSize;
+        this.servings = builder.servings;
+        this.calories = builder.calories;
+        this.fat = builder.fat;
+        this.sodium = builder.sodium;
+        this.carbohydrate = builder.carbohydrate;
     }
 
-    void setServings(int val) {
-        servings = val;
+    static Builder builder() {
+        return new Builder();
     }
 
-    void setCalories(int val) {
-        calories = val;
-    }
+    static class Builder {
+        // Required parameters
+        private int servingSize;
+        private int servings;
+        // Optional parameters - initialized to default values
+        private int calories = 0;
+        private int fat = 0;
+        private int sodium = 0;
+        private int carbohydrate = 0;
 
-    void setFat(int val) {
-        fat = val;
-    }
 
-    void setSodium(int val) {
-        sodium = val;
-    }
+        public Builder servingSize(int servingSize) {
+            this.servingSize = servingSize;
+            return this;
+        }
 
-    void setCarbohydrate(int val) {
-        carbohydrate = val;
+        public Builder servings(int servings) {
+            this.servings = servings;
+            return this;
+        }
+
+        public Builder calories(int calories) {
+            calories = calories;
+            return this;
+        }
+
+        public Builder fat(int fat) {
+            fat = fat;
+            return this;
+        }
+
+        public Builder sodium(int sodium) {
+            sodium = sodium;
+            return this;
+        }
+
+        public Builder carbohydrate(int carbohydrate) {
+            carbohydrate = carbohydrate;
+            return this;
+        }
+
+        public NutritionFacts build() {
+            // assert required parameters if necessary
+            return new NutritionFacts(this);
+        }
     }
 
     public static void main(String[] args) {
-        NutritionFacts cocaCola = new NutritionFacts();
-        cocaCola.setServingSize(240);
-        cocaCola.setServings(8);
-        cocaCola.setCalories(100);
-        cocaCola.setSodium(35);
-        cocaCola.setCarbohydrate(27);
+        NutritionFacts cocaCola = NutritionFacts.builder()
+                .servingSize(240)
+                .servings(8)
+                .calories(100)
+                .sodium(35)
+                .carbohydrate(27)
+                .build()
     }
 }
