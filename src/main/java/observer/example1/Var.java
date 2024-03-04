@@ -14,9 +14,20 @@ class Var {
         this(value, null);
     }
 
-    public Var(int value, Function<Integer, Integer> transformation) {
+    private Var(int value, Function<Integer, Integer> transformation) {
         this.value = value;
         this.transformation = transformation;
+    }
+
+    static Var of(int value) {
+        return new Var(value);
+    }
+
+    static Var bind(Var var, Function<Integer, Integer> transformation) {
+        // var bound = new Var(transformation.apply(var.value), transformation);
+        var bound = new Var(var.value, transformation);
+        var.subscribe(bound);
+        return bound;
     }
 
     int value() {
@@ -33,16 +44,6 @@ class Var {
         this.value = transformation.apply(var.value());
     }
 
-    static Var of(int value) {
-        return new Var(value);
-    }
-
-    public static Var bind(Var var, Function<Integer, Integer> transformation) {
-        // var bound = new Var(transformation.apply(var.value), transformation);
-        var bound = new Var(var.value, transformation);
-        var.subscribe(bound);
-        return bound;
-    }
 
     private void subscribe(Var bound) {
         bounds.add(bound);
