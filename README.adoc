@@ -6,9 +6,11 @@ image::book.png[]
 
 
 .plan
-* [ ] Decorator
-* [ ] Proxy
-* [ ] Adapter
-* [ ] Strategy
-* [ ] Compositor/Composition
-* [ ] Flyweight
+* [ ] Creationnal
+* * [ ] Builder, Optional, Promise
+* [ ] Structural
+* * [ ] Proxy, Decorator https://stackoverflow.com/q/18618779/4337151[the difference]
+* [ ] Behavioral
+* * [ ] Observer
+* * [ ] Strategy
+* * [ ] Iterator
