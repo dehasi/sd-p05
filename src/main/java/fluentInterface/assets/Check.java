@@ -8,8 +8,8 @@ class Check {
         return new ObjectChecker(value);
     }
 
-    static CollectionChecker that(Collection<?> value) {
-        return new CollectionChecker(value);
+    static CollectionChecker that(Collection<?> collection) {
+        return new CollectionChecker(collection);
     }
 
     static class ObjectChecker {
@@ -18,13 +18,38 @@ class Check {
         public ObjectChecker(Object value) {
             this.value = value;
         }
+
+
+        boolean isNotNull() {
+            return value != null;
+        }
+
+        boolean isNull() {
+            return value == null;
+        }
     }
 
     static class CollectionChecker {
-        private final Collection<?> value;
+        private final Collection<?> collection;
 
-        public CollectionChecker(Collection<?> value) {
-            this.value = value;
+        public CollectionChecker(Collection<?> collection) {
+            this.collection = collection;
+        }
+
+        CollectionCheckerResult hasSize(int size) {
+            return new CollectionCheckerResult(collection.size() == size);
+        }
+
+        static class CollectionCheckerResult {
+            private final boolean result;
+
+            public CollectionCheckerResult(boolean result) {
+                this.result = result;
+            }
+
+            void onConditionFail(Runnable command) {
+                if (!result) command.run();
+            }
         }
     }
 }
