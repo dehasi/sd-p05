@@ -2,7 +2,7 @@ package fluentInterface.maybe;
 
 class Problem {
 
-    String findClientMiddleName1(int id) {
+    public String findClientMiddleName1(int id) {
         // returns a value
         // or
         return null;
@@ -11,12 +11,13 @@ class Problem {
     void usage1() {
         String middleName = findClientMiddleName1(42);
 
-        if(middleName != null) {
+        if (middleName != null) {
             //do smth;
         }
     }
 
-    String findClientMiddleName2(int id) {
+
+    public String findClientMiddleName2(int id) {
         // returns a value
         // or
         return "";
@@ -25,7 +26,8 @@ class Problem {
 
     void usage2() {
         String middleName = findClientMiddleName2(42);
-        if(!middleName.isEmpty()) {
+
+        if (!middleName.isEmpty()) {
             //do smth;
         }
     }
@@ -34,7 +36,8 @@ class Problem {
         new Problem().run();
     }
 
-    void run(){}
+    void run() {
+    }
 
 
 }
