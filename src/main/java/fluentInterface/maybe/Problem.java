@@ -14,6 +14,7 @@ class Problem {
         if (middleName != null) {
             //do smth;
             middleName.equals("bla");
+            char firstLetter = middleName.charAt(0);
         }
     }
 
@@ -29,6 +30,7 @@ class Problem {
         String middleName = findClientMiddleName2(42);
 
         middleName.equals("bla");
+        char firstLetter = middleName.charAt(0);
     }
 
     public static void main(String[] args) {

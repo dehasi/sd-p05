@@ -17,6 +17,7 @@ class Mb {
             return value == null;
         }
 
+
         E get() {
             if (value != null) return value;
             throw new IllegalStateException("value does not exist");
@@ -35,6 +36,8 @@ class Mb {
 
         if (!middleName.isEmpty()) {
             //do smth;
+            middleName.get().equals("bla");
+            char firstLetter = middleName.get().charAt(0);
         }
     }
 
