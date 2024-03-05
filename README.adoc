@@ -5,14 +5,17 @@
 image::book.png[]
 
 
-.plan
-* [ ] Creational
-* * [ ] Builder, Optional, Promise
-* * [ ] Fluent interface
-* * [ ] Optional, Promise
-* [ ] Structural
-* * [ ] Proxy, Decorator https://stackoverflow.com/q/18618779/4337151[the difference]
-* [ ] Behavioral
-* * [ ] Observer
-* * [ ] Strategy
-* * [ ] Iterator
+== Plan
+
+.Creational patterns
+* [ ] Builder, Optional, Promise
+* [ ] Fluent interface
+* [ ] Optional, Promise
+
+.Structural patterns
+* [ ] Proxy, Decorator https://stackoverflow.com/q/18618779/4337151[the difference]
+
+.Behavioral patterns
+* [ ] Observer
+* [ ] Strategy https://stackoverflow.com/questions/4834979/difference-between-strategy-pattern-and-command-pattern[Strategy vs Command]
+* [ ] Iterator
