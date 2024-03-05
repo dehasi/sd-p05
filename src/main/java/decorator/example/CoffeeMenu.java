@@ -2,7 +2,7 @@ package decorator.example;
 
 class CoffeeMenu {
 
-    public interface SmthWithPrice {
+    interface SmthWithPrice {
         int price();
     }
 
@@ -49,5 +49,4 @@ class CoffeeMenu {
         var doubleMilkCoffee = new PortionOfMilk(new PortionOfMilk(new CupOfCoffee()));
         System.out.println(doubleMilkCoffee.price());
     }
-
 }
