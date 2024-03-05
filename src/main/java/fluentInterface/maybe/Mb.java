@@ -6,7 +6,7 @@ class Mb {
         private final E value;
 
         Maybe() {
-            this(null);
+            value = null;
         }
 
         Maybe(E value) {
