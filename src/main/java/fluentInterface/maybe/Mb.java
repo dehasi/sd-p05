@@ -42,4 +42,6 @@ class Mb {
         }
     }
 
+
+    //  final class Either<Result, Error extends Exception> { }
 }
