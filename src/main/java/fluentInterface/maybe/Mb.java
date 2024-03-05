@@ -10,6 +10,7 @@ class Mb {
         }
 
         Maybe(E value) {
+            assert value != null;
             this.value = value;
         }
 
