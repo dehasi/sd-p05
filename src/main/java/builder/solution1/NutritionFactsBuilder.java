@@ -10,28 +10,28 @@ class NutritionFactsBuilder {
     private int sodium = 0;
     private int carbohydrate = 0;
 
-    void setServingSize(int val) {
-        servingSize = val;
+    void setServingSize(int servingSize) {
+        this.servingSize = servingSize;
     }
 
-    void setServings(int val) {
-        servings = val;
+    void setServings(int servings) {
+        this.servings = servings;
     }
 
-    void setCalories(int val) {
-        calories = val;
+    void setCalories(int calories) {
+        this.calories = calories;
     }
 
-    void setFat(int val) {
-        fat = val;
+    void setFat(int fat) {
+        this. fat = fat;
     }
 
-    void setSodium(int val) {
-        sodium = val;
+    void setSodium(int sodium) {
+        this.sodium = sodium;
     }
 
-    void setCarbohydrate(int val) {
-        carbohydrate = val;
+    void setCarbohydrate(int carbohydrate) {
+        this.carbohydrate = carbohydrate;
     }
 
     NutritionFacts nutritionFacts() {
