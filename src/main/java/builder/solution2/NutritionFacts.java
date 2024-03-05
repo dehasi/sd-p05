@@ -32,44 +32,45 @@ class NutritionFacts {
         private int sodium = 0;
         private int carbohydrate = 0;
 
+        private Builder(){}
 
-         Builder servingSize(int servingSize) {
+        Builder servingSize(int servingSize) {
             this.servingSize = servingSize;
             return this;
         }
 
-         Builder servings(int servings) {
+        Builder servings(int servings) {
             this.servings = servings;
             return this;
         }
 
-         Builder calories(int calories) {
+        Builder calories(int calories) {
             this.calories = calories;
             return this;
         }
 
-         Builder fat(int fat) {
+        Builder fat(int fat) {
             this.fat = fat;
             return this;
         }
 
-         Builder sodium(int sodium) {
+        Builder sodium(int sodium) {
             this.sodium = sodium;
             return this;
         }
 
-         Builder carbohydrate(int carbohydrate) {
+        Builder carbohydrate(int carbohydrate) {
             this.carbohydrate = carbohydrate;
             return this;
         }
 
-         NutritionFacts build() {
+        NutritionFacts build() {
             // assert required parameters if necessary
             return new NutritionFacts(this);
         }
     }
 
-     static void main(String[] args) {
+    static void main(String[] args) {
         NutritionFacts cocaCola = NutritionFacts.builder()
                 .servingSize(240)
                 .servings(8)
